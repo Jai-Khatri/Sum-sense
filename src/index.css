@@ -1,0 +1,91 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+.floating-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.floating-mode-toggle:hover {
+  background-color: #e64a19;
+  transform: scale(1.1);
+}
+
+
+.result-screen {
+  font-size: 2rem;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #444;
+  transform: scale(1.1);
+}
+
+.button:active {
+  background-color: #555;
+  transform: scale(0.95);
+}
+
+.mode-toggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode */
+.dark .calculator-container {
+  background-color: #1c1c1c;
+  color: white;
+}
